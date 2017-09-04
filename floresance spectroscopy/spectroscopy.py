@@ -18,11 +18,11 @@ with open("data.txt") as data_file:
             else:
                 data[time] = [intensity]
 
-# The dictionary is  filled   
+# the dictionary is  filled   
 
-# Save as csv. 'w' allows us to write on it
+# save as csv. 'w' allows us to write on it
 with open("output.csv", "w") as out_file:
     for k, v in sorted(data.items()):
-# Join data values (intensity ) into strings for output
+# join data values (intensity ) into strings for output
         a = ', '.join(str(x) for x in v)
         out_file.write("%d, %s\n" % (k, a))
